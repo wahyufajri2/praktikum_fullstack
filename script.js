@@ -15,6 +15,11 @@ const menuToggle = document.querySelector(".menu-toggle");
 const btnClose = document.querySelector(".btn-close");
 const sidebar = document.getElementById("sidebar");
 
+// TAMBAHAN: Validasi NIM hanya angka
+nimInput.addEventListener("input", (e) => {
+  e.target.value = e.target.value.replace(/[^0-9]/g, "");
+});
+
 // sidebar toggle (PERBAIKAN)
 menuToggle.addEventListener("click", () => {
   sidebar.classList.add("active");
