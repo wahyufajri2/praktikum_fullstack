@@ -163,7 +163,7 @@ cancelBtn.addEventListener("click", () => {
 
 // delete handler
 async function onDelete(e) {
-  if (!confirm("Yakin ingin menghapus data ini?")) return;
+  if (!confirm("Anda yakin ingin menghapus data ini?")) return;
   const id = e.target.dataset.id;
   try {
     const res = await fetch(`${BASE}/delete.php`, {
